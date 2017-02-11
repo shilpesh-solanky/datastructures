@@ -1,4 +1,4 @@
-package datastructure.linkedlist;
+package linkedlist;
 
 public class link {
     public String bookName;

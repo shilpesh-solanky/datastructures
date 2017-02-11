@@ -1,4 +1,4 @@
-package datastructure.array;
+package array;
 
 import utilities.GetData;
 import utilities.PrintUtility;

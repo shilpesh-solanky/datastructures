@@ -1,6 +1,6 @@
 package utilities;
 
-import datastructure.linkedlist.ListNode;
+import linkedlist.ListNode;
 
 /**
  * Created by SHILPESH on 05-Feb-17.

@@ -1,6 +1,4 @@
-package datastructure.tree;
-
-import java.util.Objects;
+package tree;
 
 /**
  * Created by SHILPESH on 08-Feb-17.

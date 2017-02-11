@@ -1,4 +1,4 @@
-package datastructure.array;
+package array;
 
 /**
  * Created by SHILPESH on 04-Feb-17.
