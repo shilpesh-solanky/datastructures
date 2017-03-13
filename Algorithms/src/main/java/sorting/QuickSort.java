@@ -1,42 +1,59 @@
 package sorting;
 
-import org.junit.Test;
 
-/**
- * Created by SHILPESH on 13-Feb-17.
- */
 public class QuickSort {
+    private int[] numbers;
+    private int number;
 
-    @Test
-    public void testQuickSort() {
-
-        int[] intArraySort = {2, 4, 6, 7, 8, 1, 9};
-        System.out.println(this.sort(intArraySort));
-
+    public void sort(int[] values) {
+        // check for empty or null array
+        if (values == null || values.length == 0) {
+            return;
+        }
+        this.numbers = values;
+        number = values.length;
+        quicksort(0, number - 1);
     }
 
-/*
- A large array is partitioned into two arrays one of which holds values smaller than the specified
-  value, say pivot, based on which the partition is made and another array holds values greater
-  than the pivot value.
+    private void quicksort(int low, int high) {
+        int i = low, j = high;
+        // Get the pivot element from the middle of the list
+        int pivot = numbers[low + (high - low) / 2];
 
-   Quick sort partitions an array and then calls itself recursively twice to sort the two resulting
- subarrays. This algorithm is quite efficient for large-sized data sets as its average and worst
- case complexity are of Ο(n2), where n is the number of items.
-* */
+        // Divide into two lists
+        while (i <= j) {
+            // If the current value from the left list is smaller then the pivot
+            // element then get the next element from the left list
+            while (numbers[i] < pivot) {
+                i++;
+            }
+            // If the current value from the right list is larger then the pivot
+            // element then get the next element from the right list
+            while (numbers[j] > pivot) {
+                j--;
+            }
 
-    public int[] sort(int[] arrayToSort) {
-        /*Step 1 − Choose the highest index value has pivot
-Step 2 − Take two variables to point left and right of the list excluding pivot
-Step 3 − left points to the low index
-Step 4 − right points to the high
-Step 5 − while value at left is less than pivot move right
-Step 6 − while value at right is greater than pivot move left
-Step 7 − if both step 5 and step 6 does not match swap left and right
-Step 8 − if left ≥ right, the point where they met is new pivot*/
+            // If we have found a values in the left list which is larger then
+            // the pivot element and if we have found a value in the right list
+            // which is smaller then the pivot element then we exchange the
+            // values.
+            // As we are done we can increase i and j
+            if (i <= j) {
+                exchange(i, j);
+                i++;
+                j--;
+            }
+        }
+        // Recursion
+        if (low < j)
+            quicksort(low, j);
+        if (i < high)
+            quicksort(i, high);
+    }
 
-        int[] sortedArray = arrayToSort;
-        arrayToSort = null;
-        return sortedArray;
+    private void exchange(int i, int j) {
+        int temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
     }
 }
