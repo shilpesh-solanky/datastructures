@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Algorithms/Algorithms.iml" filepath="$PROJECT_DIR$/Algorithms/Algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Concurrency/Concurrency.iml" filepath="$PROJECT_DIR$/Concurrency/Concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Data_Structures.iml" filepath="$PROJECT_DIR$/Data_Structures.iml" />
       <module fileurl="file://$PROJECT_DIR$/DesignProject/DesignProject.iml" filepath="$PROJECT_DIR$/DesignProject/DesignProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaProject/JavaProject.iml" filepath="$PROJECT_DIR$/JavaProject/JavaProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/datastructures.iml" filepath="$PROJECT_DIR$/datastructures.iml" />
